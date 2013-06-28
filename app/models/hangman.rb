@@ -1,7 +1,8 @@
 class Hangman < ActiveRecord::Base
-POSSIBLE_HANGMAN_CHARS=' '..'~'
+  POSSIBLE_HANGMAN_CHARS=' '..'~'
 
-validate do |hangman|
+  validates :title, uniqueness: true, presence: true
+  validate do |hangman|
     hangman.must_not_allow_additions_to_the_puzzle
     hangman.must_only_allow_simple_characters
   end

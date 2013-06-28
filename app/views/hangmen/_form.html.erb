@@ -12,16 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :solution %><br>
-    <%= f.text_area :solution %>
-  </div>
-  <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
+
+  <div class="field">
+    <%= f.label :solution %><br>
+    <%= f.text_area :solution, placeholder: 'Enter the final solution here' %>
+    <input type="checkbox" id="copy_changes_to_puzzle" checked>
+    <label for="copy_changes_to_puzzle">Copy changes to puzzle</label>
+  </div>
   <div class="field">
     <%= f.label :puzzle %><br>
-    <%= f.text_area :puzzle %>
+    <%= f.text_area :puzzle, placeholder: 'Remove characters from the puzzle to make the puzzle here' %>
+    <button id="remove_characters_from_puzzle">Remove</button> <input id="character_to_remove" value="_" maxlength="1">  characters from the puzzle
   </div>
   <div class="actions">
     <%= f.submit %>
