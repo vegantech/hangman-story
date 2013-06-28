@@ -1,0 +1,29 @@
+<%= form_for(@hangman) do |f| %>
+  <% if @hangman.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hangman.errors.count, "error") %> prohibited this hangman from being saved:</h2>
+
+      <ul>
+      <% @hangman.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :solution %><br>
+    <%= f.text_area :solution %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :puzzle %><br>
+    <%= f.text_area :puzzle %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Solution:</strong>
+  <%= @hangman.solution %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @hangman.title %>
+</p>
+
+<p>
+  <strong>Puzzle:</strong>
+  <%= @hangman.puzzle %>
+</p>
+
+<%= link_to 'Edit', edit_hangman_path(@hangman) %> |
+<%= link_to 'Back', hangmen_path %>

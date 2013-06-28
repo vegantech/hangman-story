@@ -1,0 +1,31 @@
+<h1>Listing hangmen</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Solution</th>
+      <th>Title</th>
+      <th>Puzzle</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hangmen.each do |hangman| %>
+      <tr>
+        <td><%= hangman.solution %></td>
+        <td><%= hangman.title %></td>
+        <td><%= hangman.puzzle %></td>
+        <td><%= link_to 'Show', hangman %></td>
+        <td><%= link_to 'Edit', edit_hangman_path(hangman) %></td>
+        <td><%= link_to 'Destroy', hangman, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hangman', new_hangman_path %>
