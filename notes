@@ -1,0 +1,16 @@
+case sensitive
+valid chars are ASCII 32-126 inclusive 
+
+Some individual characters may not be hidden, these could match characters that are hidden
+
+
+For example:
+
+d_f hangman_test
+  return true
+end
+
+
+would like way to enter unknown hangman that I could edit with the solution during the meeting
+
+
