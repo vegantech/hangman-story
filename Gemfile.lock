@@ -48,6 +48,7 @@ GEM
       execjs
     coffee-script-source (1.6.2)
     debug_inspector (0.0.2)
+    diff (0.3.6)
     diff-lcs (1.2.4)
     erubis (2.7.0)
     execjs (1.4.0)
@@ -151,6 +152,7 @@ DEPENDENCIES
   binding_of_caller
   capybara
   coffee-rails (~> 4.0.0)
+  diff
   jbuilder (~> 1.2)
   jquery-rails
   pry-rails
